@@ -1,30 +1,4 @@
-@font-face {
-  font-family: roboto;
-  src: url('../font/Roboto/Roboto-Regular.ttf');
-  font-style: normal;
-  font-weight: 400;
-}
 
-@font-face {
-  font-family: roboto;
-  src: url('../font/Roboto/Roboto-Italic.ttf');
-  font-style: italic;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: roboto;
-  src: url('../font/Roboto/Roboto-Bold.ttf');
-  font-style: normal;
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: roboto;
-  src: url('../font/Roboto/Roboto-BoldItalic.ttf');
-  font-style: italic;
-  font-weight: 600;
-}
 
 
 :root{
@@ -34,7 +8,7 @@
 }
 
 body{
-  font-family: roboto;
+  font-family: 'Nunito';
   color: var(--with30);
   margin: 0;
   background: #251F24;
@@ -66,16 +40,21 @@ pre {
   background: #3A3539;
   padding-block: 40px;
   padding-inline: 40px;
-  font-family: 'Roboto';
+  font-family: 'Nunito';
   line-height: 24px;
   overflow: auto;
   border: 10px solid #5551FF;
   box-shadow: -10px 10px 0 0 #ABAAF6;
   border-start-start-radius: 40px;
   border-end-end-radius: 40px;
+  margin-inline:20px ;
+  margin-block:20px ;
 }
 
-
+h1,h2,h3,h4, p{
+  text-align: start;
+  justify-content: start;
+}
 
 header li {
   margin-bottom: 16px;
@@ -137,11 +116,10 @@ nav details summary {
 
 .section_content img{
   margin-block-start: 40px;
+  margin-block-end: 40px;
   display: block;
   max-inline-size: 100%;
 }
-
-
 
 .section_content{
    display: block;
@@ -236,7 +214,10 @@ blockquote span::before{
 .slider-bullet:hover{
   background: var(--with30);
 }
-
+h4{
+  line-height: 24px;
+  font-size: 14px;
+}
 .form input {
   inline-size: 100%;
   background-color: var(--with20);
@@ -254,6 +235,7 @@ blockquote span::before{
 .form input[type="submit"]{
   border: none;
   background: #157EFB;
+  color: white;
 }
 .form input::-webkit-input-placeholder{
   color: var(--with10);
@@ -269,12 +251,81 @@ header {
   position: relative;
 }
 
+.header-content .menu{
+ display: inline-block;
+ width: 100%;
+ height: 40px;
+ padding: 8px;
+ box-sizing: border-box;
+}
+
+.header-content .menu:hover{
+ background: black;
+}
+
+.header-content .variante {
+  margin-block-end: 104px;
+}
+
+.footer{
+  inline-size: 100%;
+  display: block;
+  border: 1px solid transparent;
+  text-align: center;
+  background-color: white;
+  color: black;
+  height: 50px;
+  justify-items: center;
+  box-sizing: border-box;
+}
+
+.footer h2 {
+  margin-block-end:6px ;
+}
+
+#facebook {
+  height: 24px;
+  width: 24px;
+  background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent), url('../icons/facebook.png');
+  color: transparent;
+}
+
+#instagram {
+  height: 24px;
+  width: 24px;
+  background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent), url('../icons/instagram.png');
+  color: transparent;
+}
+#twitter {
+  height: 24px;
+  width: 24px;
+  background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent), url('../icons/twitter.png');
+  color: transparent;
+}
+
+
+
 
 @media screen and (min-width: 1366px) {
+
+
+  .footer{
+    inline-size: 100%;
+    display: block;
+    text-align: center;
+    background-color: white;
+    color: black;
+    height: 150px;
+  }
+
+  .footer h2 {
+    margin-block-end:16px ;
+  }
 
   .hero{
     height: 350px;
   }
+
   header {
     position: absolute;
     inset-block-start: 0;
@@ -296,6 +347,7 @@ header {
     font-size: 60px;
     margin-block-start: 64px;
     margin-block-end: 16px;
+    color: white;
   }
 
 

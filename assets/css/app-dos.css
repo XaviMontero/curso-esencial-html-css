@@ -1,30 +1,5 @@
-@font-face {
-  font-family: roboto;
-  src: url('../font/Roboto/Roboto-Regular.ttf');
-  font-style: normal;
-  font-weight: 400;
-}
 
-@font-face {
-  font-family: roboto;
-  src: url('../font/Roboto/Roboto-Italic.ttf');
-  font-style: italic;
-  font-weight: 400;
-}
 
-@font-face {
-  font-family: roboto;
-  src: url('../font/Roboto/Roboto-Bold.ttf');
-  font-style: normal;
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: roboto;
-  src: url('../font/Roboto/Roboto-BoldItalic.ttf');
-  font-style: italic;
-  font-weight: 600;
-}
 
 :root{
   --with30:#212121;
@@ -41,8 +16,8 @@ body{
 }
 
 h1,h2,h3,h4, p{
-  text-align: start;
-  justify-content: start;
+  text-align: center;
+  justify-content: center;
 }
 
 html {
@@ -71,7 +46,7 @@ pre {
   background: white;
   padding-block: 40px;
   padding-inline: 40px;
-  font-family: roboto;
+  font-family: 'Nunito';
   line-height: 24px;
   overflow: auto;
   border: 10px solid #5551FF;
@@ -148,8 +123,8 @@ nav details summary {
   margin-block-end: 40px;
   display: block;
   max-inline-size: 100%;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section_content{
@@ -276,20 +251,13 @@ h4{
 }
 
 header {
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: -208px;
+  margin-inline-start:20px;
+  margin-block-start: 20px;
   inline-size: 188px;
 }
 
-.header {
-  position: sticky;
-  inset-block-start: -45px;
-}
 .header-content {
   position: relative;
-  inset-block-start: 65px;
-  padding-inline: 0;
 }
 
 .header-content .menu{
@@ -386,8 +354,4 @@ header {
   }
 
 
-}
-.hero {
-  height: 350px;
-  background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent), url('../icons/patron.png');
 }

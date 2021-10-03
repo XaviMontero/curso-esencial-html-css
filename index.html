@@ -5,17 +5,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/app-logical.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
     rel="stylesheet">
   <title>Blog Xavi</title>
   <meta property="og:title" content="Mi proyecto del Curso esencial de HTML y CSS" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="Todo lo que necesitas saber en tu día a día como Frontend" />
-  <meta property="og:url" content="https://leonidasesteban.github.io/curso-esencial-html-css/" />
-  <meta property="og:image" content="https://leonidasesteban.github.io/curso-esencial-html-css/images/dom.png" />
+  <meta property="og:url" content="https://xavimontero.github.io/curso-esencial-html-css/" />
+  <meta property="og:image" content="https://xavimontero.github.io/curso-esencial-html-css/assets/icons/dom.png" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="./assets/img/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./assets/img/apple-icon-60x60.png">
@@ -42,6 +44,15 @@
     <div class="wrapper">
       <div class="header-content">
         <header>
+          <h4>Variantes del proyecto</h4>
+          <nav class=variante>
+            <a href="#" class="menu" id="vatiante-1">Nemium A</a>
+            <a href="#" class="menu" id="vatiante-3">Nemium B</a>
+            <a href="#" class="menu">Nemium C</a>
+            <a href="#" class="menu">Nemium D</a>
+            <a href="#" class="menu"  id="vatiante-2">Nemium E</a>
+          </nav>
+
           <nav>
             <details open>
               <summary>
@@ -96,7 +107,7 @@
             de
             desarrollo avanzadas y de amigable uso.
           </p>
-          <img src="./assets/icons/visual.png" alt="Logo de Visual Studio Code" title="Logo de Visual Studio Code">
+          <img src="./assets/icons/visual-b.png" alt="Logo de Visual Studio Code" title="Logo de Visual Studio Code">
           <h3 id="visual">
             Visual Studio Code
           </h3>
@@ -110,7 +121,7 @@
             el que se desemvuelva.
           </p>
 
-          <img src="./assets/icons/figma.png" alt="Logo de Figma" title="Logo de Figma">
+          <img src="./assets/img/figma-b.png" alt="Logo de Figma" title="Logo de Figma">
           <h3 id="figma">
             Figma
           </h3>
@@ -119,7 +130,7 @@
             implementación por su fácil uso porque puede ser usado directamente desde el navegador.
           </p>
 
-          <img src="./assets/icons/gitHub.png" alt="Logo de GitHub" title="Logo de GitHub">
+          <img src="./assets/img/gitHub-b.png" alt="Logo de GitHub" title="Logo de GitHub">
           <h3 id="github">
             GitHub
           </h3>
@@ -303,6 +314,18 @@ content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;title&gt;Docum
       </div>
     </div>
   </main>
+  <footer>
+    <div class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <h2>© Xavi Montero 2021</h2>
+          <a href="" id='facebook'>fac</a>
+          <a href="" id='instagram'>fac</a>
+          <a href="" id='twitter'>fac</a>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script>
 
     const $detailsList = document.querySelectorAll('details');
@@ -316,6 +339,73 @@ content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;title&gt;Docum
         $detail.removeAttribute('open');
       });
     }
+
+     const $variante1 = document.querySelector('#vatiante-1');
+        $variante1.addEventListener('click', cambioCss, false);
+        $variante1.myParam = 1;
+
+      const $variante2 = document.querySelector('#vatiante-2');
+      $variante2.addEventListener('click', cambioCss, false);
+      $variante2.myParam = 2;
+
+      const $variante3 = document.querySelector('#vatiante-3');
+      $variante3.addEventListener('click', cambioCss, false);
+      $variante3.myParam = 3;
+
+     function cambioCss(variante){
+       reiniciarMenu();
+       hoverVariante(variante.currentTarget.myParam);
+      switch (variante.currentTarget.myParam) {
+        case 1:
+          cambio('./assets/css/app-logical.css');
+          break;
+        case 2:
+          cambio('./assets/css/app.css');
+          break;
+        case 3:
+          cambio('./assets/css/app-dos.css');
+          break;
+      }
+     }
+
+     function reiniciarMenu (){
+       $variante1.style.removeProperty('background');
+       $variante2.style.removeProperty('background');
+       $variante2.style.removeProperty('color');
+       $variante3.style.removeProperty('background');
+       $variante3.style.removeProperty('color');
+     }
+     function hoverVariante (hover){
+       switch (hover) {
+        case 0:
+           $variante1.style.setProperty('background', 'black');
+           break;
+        case 1:
+           $variante1.style.setProperty('background', 'black');
+           break;
+         case 2:
+           $variante2.style.setProperty('background', 'black');
+           $variante2.style.setProperty('color', 'white');
+           break;
+         case 3:
+           $variante3.style.setProperty('background', 'black');
+           $variante3.style.setProperty('color', 'white');
+           break;
+       }
+     }
+    cambio ('null');
+    hoverVariante(0);
+     function cambio(url){
+       var head = document.getElementsByTagName('head')[0];
+       var link = document.createElement('link');
+       link.id = 'myCss';
+       link.rel = 'stylesheet';
+       link.type = 'text/css';
+       link.href = url=== 'null'? './assets/css/app-logical.css': url;
+       link.media = 'all';
+       head.appendChild(link);
+     }
+
 
 
   </script>
