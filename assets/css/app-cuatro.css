@@ -1,4 +1,30 @@
+@font-face {
+  font-family: roboto;
+  src: url('../font/Roboto/Roboto-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
 
+@font-face {
+  font-family: roboto;
+  src: url('../font/Roboto/Roboto-Italic.ttf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url('../font/Roboto/Roboto-Bold.ttf');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url('../font/Roboto/Roboto-BoldItalic.ttf');
+  font-style: italic;
+  font-weight: 600;
+}
 
 
 :root{
@@ -8,7 +34,7 @@
 }
 
 body{
-  font-family: 'Rubik';
+  font-family: roboto;
   color: var(--with30) !important;
   margin: 0;
   background: white;
@@ -16,8 +42,8 @@ body{
 }
 
 h1,h2,h3,h4, p{
-  text-align: center;
-  justify-content: center;
+  text-align: start;
+  justify-content: start;
 }
 
 html {
@@ -103,7 +129,7 @@ nav details summary {
 }
 
 .hero {
-  height: 120px;
+  height: 0px;
   background-image: linear-gradient(274.51deg, rgba(74, 0, 224, 0.6) 5%, rgba(142, 45, 226, 0.5) 130.61%), url('../icons/patron-2.png');
 }
 
@@ -123,8 +149,8 @@ nav details summary {
   margin-block-end: 40px;
   display: block;
   max-inline-size: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .section_content{
@@ -153,14 +179,14 @@ nav details summary {
   content:counter(titleList) ". ";
 }
 .section_content h3::after{
-content: '';
-width: 0px;
-height: 0px;
-background: var(--with30);
-display: inline-block;
-position: absolute;
-left: 0;
-bottom: -4px;
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: var(--with30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
 }
 
 blockquote{
@@ -328,18 +354,18 @@ header {
   }
 
   .hero{
-    height: 350px;
+    height: 0px;
   }
 
   header {
-    position: absolute;
+    position: initial;
     inset-block-start: 0;
-    inset-inline-start: +908px;
+    inset-inline-start: -208px;
     inline-size: 188px;
   }
 
   .header {
-    position: sticky;
+    position: initial;
     inset-block-start: -45px;
   }
   .header-content {
@@ -356,4 +382,8 @@ header {
   }
 
 
+}
+.hero {
+  height: 0px;
+  background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent), url('../icons/patron.png');
 }

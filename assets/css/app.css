@@ -26,6 +26,7 @@
   font-weight: 600;
 }
 
+
 :root{
   --with30:#212121;
   --with10: #616161;
@@ -33,7 +34,7 @@
 }
 
 body{
-  font-family: 'Rubik';
+  font-family: roboto;
   color: var(--with30) !important;
   margin: 0;
   background: white;
@@ -71,7 +72,7 @@ pre {
   background: white;
   padding-block: 40px;
   padding-inline: 40px;
-  font-family: roboto;
+  font-family: 'Nunito';
   line-height: 24px;
   overflow: auto;
   border: 10px solid #5551FF;
@@ -178,14 +179,14 @@ nav details summary {
   content:counter(titleList) ". ";
 }
 .section_content h3::after{
-content: '';
-width: 0px;
-height: 0px;
-background: var(--with30);
-display: inline-block;
-position: absolute;
-left: 0;
-bottom: -4px;
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: var(--with30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
 }
 
 blockquote{
@@ -195,6 +196,7 @@ blockquote{
   font-size: 24px;
   border-left: 4px solid var(--with30);
   line-height: 32px;
+  background-color: white;
 }
 
 blockquote span{
@@ -276,20 +278,13 @@ h4{
 }
 
 header {
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: -208px;
+  margin-inline-start:20px;
+  margin-block-start: 20px;
   inline-size: 188px;
 }
 
-.header {
-  position: sticky;
-  inset-block-start: -45px;
-}
 .header-content {
   position: relative;
-  inset-block-start: 65px;
-  padding-inline: 0;
 }
 
 .header-content .menu{
@@ -323,6 +318,7 @@ header {
 
 .footer h2 {
   margin-block-end:6px ;
+  text-align: center;
 }
 
 #facebook {
@@ -364,7 +360,7 @@ header {
   header {
     position: absolute;
     inset-block-start: 0;
-    inset-inline-start: +908px;
+    inset-inline-start: -208px;
     inline-size: 188px;
   }
 

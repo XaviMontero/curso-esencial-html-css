@@ -48,8 +48,8 @@
           <nav class=variante>
             <a href="#" class="menu" id="vatiante-1">Nemium A</a>
             <a href="#" class="menu" id="vatiante-3">Nemium B</a>
-            <a href="#" class="menu">Nemium C</a>
-            <a href="#" class="menu">Nemium D</a>
+            <a href="#" class="menu" id="vatiante-4">Nemium C</a>
+            <a href="#" class="menu" id="vatiante-5">Nemium D</a>
             <a href="#" class="menu"  id="vatiante-2">Nemium E</a>
           </nav>
 
@@ -352,6 +352,14 @@ content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;title&gt;Docum
       $variante3.addEventListener('click', cambioCss, false);
       $variante3.myParam = 3;
 
+      const $variante4 = document.querySelector('#vatiante-4');
+      $variante4.addEventListener('click', cambioCss, false);
+      $variante4.myParam = 4;
+
+      const $variante5 = document.querySelector('#vatiante-5');
+      $variante5.addEventListener('click', cambioCss, false);
+      $variante5.myParam = 5;
+
      function cambioCss(variante){
        reiniciarMenu();
        hoverVariante(variante.currentTarget.myParam);
@@ -365,6 +373,12 @@ content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;title&gt;Docum
         case 3:
           cambio('./assets/css/app-dos.css');
           break;
+        case 4:
+          cambio('./assets/css/app-tres.css');
+          break;
+        case 5:
+          cambio('./assets/css/app-cuatro.css');
+          break;
       }
      }
 
@@ -374,6 +388,9 @@ content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;title&gt;Docum
        $variante2.style.removeProperty('color');
        $variante3.style.removeProperty('background');
        $variante3.style.removeProperty('color');
+       $variante4.style.removeProperty('background');
+       $variante5.style.removeProperty('background');
+       $variante5.style.removeProperty('color');
      }
      function hoverVariante (hover){
        switch (hover) {
@@ -390,6 +407,15 @@ content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;title&gt;Docum
          case 3:
            $variante3.style.setProperty('background', 'black');
            $variante3.style.setProperty('color', 'white');
+           break;
+
+         case 4:
+           $variante4.style.setProperty('background', 'black');
+           break;
+
+         case 5:
+           $variante5.style.setProperty('background', 'black');
+           $variante5.style.setProperty('color', 'white');
            break;
        }
      }
